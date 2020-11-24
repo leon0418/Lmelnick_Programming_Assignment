@@ -69,17 +69,34 @@ public class FedCleProgrammingAssignment {
             case 1:
                 System.out.println("Case 1");
                 //Stop Words Section
-                StopWords sw =new StopWords();
-                sw.removeStopWords(is);
+                InputStream stopWordsStream = FedCleProgrammingAssignment.class.getResourceAsStream("/resources/stopwords.txt");
+                InputStreamToStringConverter stopWordsConverter = new InputStreamToStringConverter();
+                String stopWordsInput = stopWordsConverter.convertInputStreamToString(stopWordsStream);
+                InputStreamToStringConverter stopWordsTextConverter = new InputStreamToStringConverter();
+                String stopWordsTextInput = stopWordsTextConverter.convertInputStreamToString(is);
+                StopWords sw = new StopWords();
+                sw.removeStopWords(stopWordsInput,stopWordsTextInput,true);
+                stopWordsStream.close();
+                is.close();
+                
+//                StopWords sw =new StopWords();
+//                sw.removeStopWords(is);
                 complete = true;
                 break;
             case 2:
                 System.out.println("Case 2");
                 //Remove Non-alphabetical section
-                RemoveNonAlphabeticalStatic rna = new RemoveNonAlphabeticalStatic();
-                rna.removeNonAlphabetical(is);
+                InputStreamToStringConverter nonAlphaConverter = new InputStreamToStringConverter();
+                String nonAlphaInput = nonAlphaConverter.convertInputStreamToString(is);
+                RemoveNonAlpha rna = new RemoveNonAlpha();
+                rna.removeNonAlphabetical(nonAlphaInput);
+                is.close();
+                
+//                RemoveNonAlphabeticalStatic rna = new RemoveNonAlphabeticalStatic();
+//                rna.removeNonAlphabetical(is);
                 complete = true;
                 break;
+
             case 3:
                 System.out.println("Case 3");
                 complete = true;
@@ -87,15 +104,32 @@ public class FedCleProgrammingAssignment {
                 case 4:
                 System.out.println("Case 4");
                  //Word Frequency Section
+                InputStreamToStringConverter wordFreqConverter = new InputStreamToStringConverter();
+                String wordFreqInput = wordFreqConverter.convertInputStreamToString(is);
                 ComputeFrequency cf = new ComputeFrequency();
-                cf.computeFrequency(is, false);//pass the InputStream and that this is not a top twenty count
+                cf.computeFrequency(wordFreqInput, false);//pass the String and that this is not a top twenty count
+                is.close();
+//                ComputeFrequency cf = new ComputeFrequency();
+//                cf.computeFrequency(is, false);//pass the InputStream and that this is not a top twenty count
                 complete = true;
                 break;
             case 5:
                 System.out.println("Case 5");
                 //Top 20 Section
+                //
+                InputStream ttstopWordsStream = FedCleProgrammingAssignment.class.getResourceAsStream("/resources/stopwords.txt");
+                InputStreamToStringConverter ttstopWordsConverter = new InputStreamToStringConverter();
+                String ttstopWordsInput = ttstopWordsConverter.convertInputStreamToString(ttstopWordsStream);
+                //Get the text for both methods
+                InputStreamToStringConverter topTwentyConverter = new InputStreamToStringConverter();
+                String topTwentyInput = topTwentyConverter.convertInputStreamToString(is);
+                //Now put text through the StopWords method with the display flag false so the text is not shown
+                StopWords ttsw = new StopWords();
+                topTwentyInput = ttsw.removeStopWords(ttstopWordsInput,topTwentyInput,false);
+                //Now compute Top Twenty without the stop words
                 ComputeFrequency cfTopTwenty = new ComputeFrequency();
-                cfTopTwenty.computeFrequency(is, true);//pass the InputStream and that this is a top twenty count
+                cfTopTwenty.computeFrequency(topTwentyInput, true);//pass the InputStream and that this is a top twenty count
+                is.close();
                 complete = true;
                 break;
             case 6:
