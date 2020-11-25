@@ -14,7 +14,7 @@ public class FedCleProgrammingAssignment {
             boolean done = false;
             while (!done) {
                 try {
-                    System.out.println("\nPlease choose which file you would like to work with:");
+                    System.out.println("\nPlease choose which file you would like to work with:\n");
                     System.out.println("Enter 1 for Declaration of Independence");
                     System.out.println("Enter 2 for Alice in Wonderland");
                     System.out.println("Enter 3 to quit.\n");
@@ -44,7 +44,7 @@ public class FedCleProgrammingAssignment {
             boolean complete = false;
             while (!complete) {
                 try {
-                    System.out.println("Please choose action you would like to take on the chosen file");
+                    System.out.println("\nPlease choose action you would like to take on the chosen file:\n");
                     System.out.println("Enter 1 to remove stop words");
                     System.out.println("Enter 2 to remove all non-alphabetical text");
                     System.out.println("Enter 3 to stem words into their root form");
@@ -55,7 +55,7 @@ public class FedCleProgrammingAssignment {
                     actionChoice = scanner.nextInt();
                     switch (actionChoice) {
                         case 1:
-                            System.out.println("You chose to remove stop words");
+                            System.out.println("\n\nYou chose to remove stop words:\n\n");
                             //Stop Words Section
                             InputStream stopWordsStream = FedCleProgrammingAssignment.class.getResourceAsStream("/resources/stopwords.txt");
                             InputStreamToStringConverter stopWordsConverter = new InputStreamToStringConverter();
@@ -69,7 +69,7 @@ public class FedCleProgrammingAssignment {
                             complete = true;
                             break;
                         case 2:
-                            System.out.println("You chose to remove all non-alphabetical characters");
+                            System.out.println("\n\nYou chose to remove all non-alphabetical characters:\n\n");
                             //Remove Non-alphabetical section
                             InputStreamToStringConverter nonAlphaConverter = new InputStreamToStringConverter();
                             String nonAlphaInput = nonAlphaConverter.convertInputStreamToString(is);
@@ -81,7 +81,7 @@ public class FedCleProgrammingAssignment {
 
                         case 3:
                             //Stemming section
-                            System.out.println("You chose to stem words into their root form");
+                            System.out.println("\n\nYou chose to stem words into their root form:\n\n");
                             char[] w = new char[501];
                             Stemmer s = new Stemmer();
 
@@ -138,7 +138,7 @@ public class FedCleProgrammingAssignment {
                             complete = true;
                             break;
                         case 4:
-                            System.out.println("You chose to compute the frequency of each word");
+                            System.out.println("\n\nYou chose to compute the frequency of each word:\n\n");
                             //Word Frequency Section
                             InputStreamToStringConverter wordFreqConverter = new InputStreamToStringConverter();
                             String wordFreqInput = wordFreqConverter.convertInputStreamToString(is);
@@ -148,7 +148,7 @@ public class FedCleProgrammingAssignment {
                             complete = true;
                             break;
                         case 5:
-                            System.out.println("You chose to display the 20 most commonly appearing terms in decending order");
+                            System.out.println("\n\nYou chose to display the 20 most commonly appearing terms in decending order:\n\n");
                             //Top 20 Section
                             InputStream ttstopWordsStream = FedCleProgrammingAssignment.class.getResourceAsStream("/resources/stopwords.txt");
                             InputStreamToStringConverter ttstopWordsConverter = new InputStreamToStringConverter();
