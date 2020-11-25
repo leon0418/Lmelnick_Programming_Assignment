@@ -6,8 +6,8 @@ opening a command prompt and navigating to the location that you downloaded it. 
 
 Method 2: If you would like to instead build the jar from the code on the repo, please follow these steps.
 
-  1. Download ANT 1.10 or higher from Apache
-  2. Install ANT using instructions on their website
+  1. Download ANT 1.10 or higher from Apache here https://ant.apache.org/bindownload.cgi
+  2. Install ANT using instructions on their website here https://ant.apache.org/manual/index.html
   3. Download the project from GitHub
   3. Open CMD and navigate to the project root
   4. Enter: ant
