@@ -25,11 +25,10 @@ Assumptions:
 1. That I could create a reusable method for coverting the file to String.
 2. That apostrophes within words were going to be one of the most difficult challenges of this assignment, not happy with my result in that regard, I need to study up
    on regular expressions.
-3. As I have been mainly focused on web development at my previous places of work, I assumed that the file io element would be a little bit of a challenge since I don't have a 
-   ton of experience with it. Realized that I need to research and internalize best practices for file io. 
-4. That in order to have maintainable code that I would split each action into its own class except where it made sense to combine, like I did in the ComputeFrequency class, 
+3. As I have been mainly focused on web development at my previous places of work, I assumed that the file io element would be a little bit of a challenge since I don't have a ton of experience with it. Realized that I need to research and internalize best practices for file io. 
+4. That in order to have maintainable code that I would split each action into its own class, except where it made sense to combine, like I did in the ComputeFrequency class, 
    passing a flag to determine which output to return.
-5. In hindsight, I would have had all methods return the result String and display them in the switch statement of the main class.
+5. In hindsight, I would have had all methods return the result Strings and then display them in the switch statement of the main class.
 
 
 Program Output (every option not shown for space considerations):
