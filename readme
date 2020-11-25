@@ -1,0 +1,874 @@
+How to run the program:
+Note: Requires Java 12 or higher on any computer you want to run the jar on
+
+Method 1: I have provided a link to my Google drive copy of the jar file to run this program in the email I sent that has the link to this Github repository. You can run it by 
+opening a command prompt and navigating to the location that you downloaded it. Enter: java -jar "FedCleProgrammingAssignment.jar"  
+
+Method 2: If you would like to instead build the jar from the code on the repo, please follow these steps.
+
+  1. Download ANT 1.10 or higher from Apache
+  2. Install ANT using instructions on their website
+  3. Download the project from GitHub
+  3. Open CMD and navigate to the project root
+  4. Enter: ant
+  5. Should build the project and create the dist directory where the jar gets built
+  6. Navigate to the dist directory
+  7. Enter: java -jar "FedCleProgrammingAssignment.jar"
+  8. Follow the in program prompts  
+
+Brief Explanation:
+The program first prompts you to enter which file of the two provided you would like to take action on. After picking the file, you are prompted to enter which action you
+would like to take on the chosen file. At any time there is an option to end the program.
+
+Assumptions:
+1. That I could have a reusable method for coverting the file to String.
+2. That apostrophes within words were going to be one of the most difficult challenges of this assignment, not happy with my result in that regard, I need to study up
+   on regular expressions.
+3. As I have been mainly focused on web development at my previous places of work, I assumed that the file io element would be a little bit of a challenge since I don't have a 
+   ton of experience with it. Realize that I need to research best practices for file io. 
+4. That in order to have maintainable code that I would split each action into it's own class except where it made sense to combine, like I did in the ComputeFrequency class, 
+   passing a flag to determine which output to return.
+
+
+Program Output (every option not shown for space considerations):
+
+Please choose which file you would like to work with:
+
+Enter 1 for Declaration of Independence
+Enter 2 for Alice in Wonderland
+Enter 3 to quit.
+
+1
+
+Please choose action you would like to take on the chosen file:
+
+Enter 1 to remove stop words
+Enter 2 to remove all non-alphabetical text
+Enter 3 to stem words into their root form
+Enter 4 to compute the frequency of each word
+Enter 5 to display the 20 most commonly appearing terms in decending order
+Enter 6 to quit.
+
+1
+
+
+You chose to remove stop words:
+
+
+[course human events becomes necessary one people dissolve political bands connected another assume among powers earth  separate equal station laws 
+nature nature's god entitle  decent respect opinions mankind requires declare causes impel separation   hold truths self evident  men created equal  
+endowed creator certain unalienable rights  among life  liberty pursuit happiness    secure rights  governments instituted among men  deriving just 
+powers consent governed    whenever form government becomes destructive ends  right people alter abolish  institute new government  laying foundation
+principles organizing powers form  shall seem likely effect safety happiness  prudence  indeed  will dictate governments long established changed light
+transient causes  accordingly experience hath shewn mankind disposed suffer  evils sufferable right abolishing forms accustomed  long train abuses usurpations
+pursuing invariably object evinces design reduce absolute despotism  right  duty  throw government  provide new guards future security    patient sufferance
+colonies  now necessity constrains alter former systems government  history present king great britain history repeated injuries usurpations  direct object
+establishment absolute tyranny states  prove  let facts submitted candid world   refused assent laws  wholesome necessary public good   forbidden governors pass
+laws immediate pressing importance  unless suspended operation till assent obtained  suspended  utterly neglected attend   refused pass laws accommodation large
+districts people  unless people relinquish right representation legislature  right inestimable formidable tyrants   called together legislative bodies places unusual  
+uncomfortable  distant depository public records  sole purpose fatiguing compliance measures   dissolved representative houses repeatedly  opposing manly firmness
+invasions rights people   refused long time  dissolutions  cause others elected  whereby legislative powers  incapable annihilation  returned people large exercise
+state remaining mean time exposed dangers invasion without  convulsions within   endeavoured prevent population states  purpose obstructing laws naturalization foreigners 
+refusing pass others encourage migrations hither  raising conditions new appropriations lands   obstructed administration justice refusing assent laws establishing
+judiciary powers   made judges dependent will alone tenure offices  amount payment salaries   erected multitude new offices  sent hither swarms officers harass people
+eat substance   kept among us  times peace  standing armies without consent legislatures   affected render military independent superior civil power   combined others 
+subject us jurisdiction foreign constitution  unacknowledged laws  giving assent acts pretended legislation   quartering large bodies armed troops among us   protecting
+mock trial punishment murders commit inhabitants states   cutting trade parts world   imposing taxes us without consent   depriving us many cases  benefit trial jury
+transporting us beyond seas tried pretended offences   abolishing free system english laws neighbouring province  establishing therein arbitrary government  enlarging
+boundaries render example fit instrument introducing absolute rule colonies  taking away charters  abolishing valuable laws altering fundamentally forms governments
+suspending legislatures  declaring invested power legislate us cases whatsoever   abdicated government  declaring us protection waging war us   plundered seas  ravaged
+coasts  burnt towns  destroyed lives people   time transporting large armies foreign mercenaries compleat works death  desolation  tyranny  already begun circumstances
+cruelty   perfidy scarcely paralleled barbarous ages  totally unworthy head civilized nation   constrained fellow citizens taken captive high seas bear arms country  
+become executioners friends brethren  fall hands   excited domestic insurrections amongst us  endeavoured bring inhabitants frontiers  merciless indian savages whose 
+known rule warfare  undistinguished destruction ages  sexes conditions   every stage oppressions petitioned redress humble terms  repeated petitions answered repeated
+injury  prince  whose character thus marked every act may define tyrant  unfit ruler free people   wanting attentions british brethren  warned time time attempts 
+legislature extend unwarrantable jurisdiction us  reminded circumstances emigration settlement  appealed native justice magnanimity  conjured ties common kindred disavow
+usurpations  inevitably interrupt connections correspondence  deaf voice justice consanguinity  must  therefore  acquiesce necessity  denounces separation  hold  hold rest
+mankind  enemies war  peace friends    therefore  representatives united states america  general congress  assembled  appealing supreme judge world rectitude intentions   
+name  authority good people colonies  solemnly publish declare  united colonies  right free independent states  absolved allegiance british crown  political connection state
+great britain  totally dissolved  free independent states  full power levy war  conclude peace  contract alliances  establish commerce  acts things independent states may
+right    support declaration  firm reliance protection divine providence  mutually pledge lives  fortunes  sacred honor]
+
+Please choose which file you would like to work with:
+Enter 1 for Declaration of Independence
+Enter 2 for Alice in Wonderland
+Enter 3 to quit.
+
+1
+
+Please choose action you would like to take on the chosen file:
+
+Enter 1 to remove stop words
+Enter 2 to remove all non-alphabetical text
+Enter 3 to stem words into their root form
+Enter 4 to compute the frequency of each word
+Enter 5 to display the 20 most commonly appearing terms in decending order
+Enter 6 to quit.
+
+2
+
+
+You chose to remove all non-alphabetical characters:
+
+
+When in the Course of human events it becomes necessary for one people to dissolve the political bands which have connected them with another and to assume among the powers of the earth the separate and equal station to which the Laws of Nature and of Natures God entitle them a decent respect to the opinions of mankind requires that they should declare the causes which impel them to the separation
+
+We hold these truths to be selfevident that all men are created equal that they are endowed by their Creator with certain unalienable Rights that among these are Life Liberty and the pursuit of Happiness  That to secure these rights Governments are instituted among Men deriving their just powers from the consent of the governed  That whenever any Form of Government becomes destructive of these ends it is the Right of the People to alter or to abolish it and to institute new Government laying its foundation on such principles and organizing its powers in such form as to them shall seem most likely to effect their Safety and Happiness Prudence indeed will dictate that Governments long established should not be changed for light and transient causes and accordingly all experience hath shewn that mankind are more disposed to suffer while evils are sufferable than to right themselves by abolishing the forms to which they are accustomed But when a long train of abuses and usurpations pursuing invariably the same Object evinces a design to reduce them under absolute Despotism it is their right it is their duty to throw off such Government and to provide new Guards for their future security  Such has been the patient sufferance of these Colonies and such is now the necessity which constrains them to alter their former Systems of Government The history of the present King of Great Britain is a history of repeated injuries and usurpations all having in direct object the establishment of an absolute Tyranny over these States To prove this let Facts be submitted to a candid world
+
+He has refused his Assent to Laws the most wholesome and necessary for the public good
+
+He has forbidden his Governors to pass Laws of immediate and pressing importance unless suspended in their operation till his Assent should be obtained and when so suspended he has utterly neglected to attend to them
+
+He has refused to pass other Laws for the accommodation of large districts of people unless those people would relinquish the right of Representation in the Legislature a right inestimable to them and formidable to tyrants only
+
+He has called together legislative bodies at places unusual uncomfortable and distant from the depository of their Public Records for the sole purpose of fatiguing them into compliance with his measures
+
+He has dissolved Representative Houses repeatedly for opposing with manly firmness his invasions on the rights of the people
+
+He has refused for a long time after such dissolutions to cause others to be elected whereby the Legislative Powers incapable of Annihilation have returned to the People at large for their exercise the State remaining in the mean time exposed to all the dangers of invasion from without and convulsions within
+
+He has endeavoured to prevent the population of these States for that purpose obstructing the Laws for Naturalization of Foreigners refusing to pass others to encourage their migrations hither and raising the conditions of new Appropriations of Lands
+
+He has obstructed the Administration of Justice by refusing his Assent to Laws for establishing Judiciary Powers
+
+He has made Judges dependent on his Will alone for the tenure of their offices and the amount and payment of their salaries
+
+He has erected a multitude of New Offices and sent hither swarms of Officers to harass our people and eat out their substance
+
+He has kept among us in times of peace Standing Armies without the Consent of our legislatures
+
+He has affected to render the Military independent of and superior to the Civil Power
+
+He has combined with others to subject us to a jurisdiction foreign to our constitution and unacknowledged by our laws giving his Assent to their Acts of pretended Legislation
+
+For quartering large bodies of armed troops among us
+
+For protecting them by a mock Trial from punishment for any Murders which they should commit on the Inhabitants of these States
+
+For cutting off our Trade with all parts of the world
+
+For imposing Taxes on us without our Consent
+
+For depriving us in many cases of the benefit of Trial by Jury
+
+For transporting us beyond Seas to be tried for pretended offences
+
+For abolishing the free System of English Laws in a neighbouring Province establishing therein an Arbitrary government and enlarging its Boundaries so as to render it at once an example and fit instrument for introducing the same absolute rule into these Colonies
+
+For taking away our Charters abolishing our most valuable Laws and altering fundamentally the Forms of our Governments
+
+For suspending our own Legislatures and declaring themselves invested with power to legislate for us in all cases whatsoever
+
+He has abdicated Government here by declaring us out of his Protection and waging War against us
+
+He has plundered our seas ravaged our coasts burnt our towns and destroyed the lives of our people
+
+He is at this time transporting large Armies of foreign Mercenaries to compleat the works of death desolation and tyranny already begun with circumstances of Cruelty  Perfidy scarcely paralleled in the most barbarous ages and totally unworthy the Head of a civilized nation
+
+He has constrained our fellow Citizens taken Captive on the high Seas to bear Arms against their Country to become the executioners of their friends and Brethren or to fall themselves by their Hands
+
+He has excited domestic insurrections amongst us and has endeavoured to bring on the inhabitants of our frontiers the merciless Indian Savages whose known rule of warfare is an undistinguished destruction of all ages sexes and conditions
+
+In every stage of these Oppressions We have Petitioned for Redress in the most humble terms Our repeated Petitions have been answered only by repeated injury A Prince whose character is thus marked by every act which may define a Tyrant is unfit to be the ruler of a free people
+
+Nor have We been wanting in attentions to our British brethren We have warned them from time to time of attempts by their legislature to extend an unwarrantable jurisdiction over us We have reminded them of the circumstances of our emigration and settlement here We have appealed to their native justice and magnanimity and we have conjured them by the ties of our common kindred to disavow these usurpations which would inevitably interrupt our connections and correspondence They too have been deaf to the voice of justice and of consanguinity We must therefore acquiesce in the necessity which denounces our Separation and hold them as we hold the rest of mankind Enemies in War in Peace Friends
+
+We therefore the Representatives of the united States of America in General Congress Assembled appealing to the Supreme Judge of the world for the rectitude of our intentions do in the Name and by Authority of the good People of these Colonies solemnly publish and declare That these united Colonies are and of Right ought to be Free and Independent States that they are Absolved from all Allegiance to the British Crown and that all political connection between them and the State of Great Britain is and ought to be totally dissolved and that as Free and Independent States they have full Power to levy War conclude Peace contract Alliances establish Commerce and to do all other Acts and Things which Independent States may of right do  And for the support of this Declaration with a firm reliance on the protection of Divine Providence we mutually pledge to each other our Lives our Fortunes and our sacred Honor
+
+Please choose which file you would like to work with:
+
+Enter 1 for Declaration of Independence
+Enter 2 for Alice in Wonderland
+Enter 3 to quit.
+
+1
+
+Please choose action you would like to take on the chosen file:
+
+Enter 1 to remove stop words
+Enter 2 to remove all non-alphabetical text
+Enter 3 to stem words into their root form
+Enter 4 to compute the frequency of each word
+Enter 5 to display the 20 most commonly appearing terms in decending order
+Enter 6 to quit.
+
+3
+
+
+You chose to stem words into their root form:
+
+
+when in the cours of human event it becom necessari for on peopl to dissolv the polit band which have connect them with anoth and to assum among the power of the earth, the separ and equal station to which the law of natur and of natur's god entitl them, a decent respect to the opinion of mankind requir that thei should declar the caus which impel them to the separ.
+
+we hold these truth to be self-evid, that all men ar creat equal, that thei ar endow by their creator with certain unalien right, that among these ar life, liberti and the pursuit of happi. ? that to secur these right, govern ar institut among men, deriv their just power from the consent of the govern, ? that whenev ani form of govern becom destruct of these end, it is the right of the peopl to alter or to abolish it, and to institut new govern, lai it foundat on such principl and organ it power in such form, as to them shall seem most like to effect their safeti and happi. prudenc, inde, will dictat that govern long establish should not be chang for light and transient caus; and accordingli all experi hath shewn that mankind ar more dispos to suffer, while evil ar suffer than to right themselv by abolish the form to which thei ar accustom. but when a long train of abus and usurp, pursu invari the same object evinc a design to reduc them under absolut despot, it is their right, it is their duti, to throw off such govern, and to provid new guard for their futur secur. ? such ha been the patient suffer of these coloni; and such is now the necess which constrain them to alter their former system of govern. the histori of the present king of great britain is a histori of repeat injuri and usurp, all have in direct object the establish of an absolut tyranni over these state. to prove thi, let fact be submit to a candid world.
+
+he ha refus hi assent to law, the most wholesom and necessari for the public good.
+
+he ha forbidden hi governor to pass law of immedi and press import, unless suspend in their oper till hi assent should be obtain; and when so suspend, he ha utterli neglect to attend to them.
+
+he ha refus to pass other law for the accommod of larg district of peopl, unless those peopl would relinquish the right of represent in the legislatur, a right inestim to them and formid to tyrant onli.
+
+he ha call togeth legisl bodi at place unusu, uncomfort, and distant from the depositori of their public record, for the sole purpos of fatigu them into complianc with hi measur.
+
+he ha dissolv repres hous repeatedli, for oppos with manli firm hi invas on the right of the peopl.
+
+he ha refus for a long time, after such dissolut, to caus other to be elect, wherebi the legisl power, incap of annihil, have return to the peopl at larg for their exercis; the state remain in the mean time expos to all the danger of invas from without, and convuls within.
+
+he ha endeavour to prevent the popul of these state; for that purpos obstruct the law for natur of foreign; refus to pass other to encourag their migrat hither, and rais the condit of new appropri of land.
+
+he ha obstruct the administr of justic by refus hi assent to law for establish judiciari power.
+
+he ha made judg depend on hi will alon for the tenur of their offic, and the amount and payment of their salari.
+
+he ha erect a multitud of new offic, and sent hither swarm of offic to harass our peopl and eat out their substanc.
+
+he ha kept among us, in time of peac, stand armi without the consent of our legislatur.
+
+he ha affect to render the militari independ of and superior to the civil power.
+
+he ha combin with other to subject us to a jurisdict foreign to our constitut, and unacknowledg by our law; give hi assent to their act of pretend legisl:
+
+for quarter larg bodi of arm troop among us:
+
+for protect them, by a mock trial from punish for ani murder which thei should commit on the inhabit of these state:
+
+for cut off our trade with all part of the world:
+
+for impos tax on us without our consent:
+
+for depriv us in mani case, of the benefit of trial by juri:
+
+for transport us beyond sea to be tri for pretend offenc:
+
+for abolish the free system of english law in a neighbour provinc, establish therein an arbitrari govern, and enlarg it boundari so as to render it at onc an exampl and fit instrument for introduc the same absolut rule into these coloni
+
+for take awai our charter, abolish our most valuabl law and alter fundament the form of our govern:
+
+for suspend our own legislatur, and declar themselv invest with power to legisl for us in all case whatsoev.
+
+he ha abdic govern here, by declar us out of hi protect and wage war against us.
+
+he ha plunder our sea, ravag our coast, burnt our town, and destroi the live of our peopl.
+
+he is at thi time transport larg armi of foreign mercenari to compleat the work of death, desol, and tyranni, alreadi begun with circumst of cruelti & perfidi scarc parallel in the most barbar ag, and total unworthi the head of a civil nation.
+
+he ha constrain our fellow citizen taken captiv on the high sea to bear arm against their countri, to becom the execution of their friend and brethren, or to fall themselv by their hand.
+
+he ha excit domest insurrect amongst us, and ha endeavour to bring on the inhabit of our frontier, the merciless indian savag whose known rule of warfar, is an undistinguish destruct of all ag, sex and condit.
+
+in everi stage of these oppress we have petit for redress in the most humbl term: our repeat petit have been answer onli by repeat injuri. a princ, whose charact is thu mark by everi act which mai defin a tyrant, is unfit to be the ruler of a free peopl.
+
+nor have we been want in attent to our british brethren. we have warn them from time to time of attempt by their legislatur to extend an unwarrant jurisdict over us. we have remind them of the circumst of our emigr and settlement here. we have appeal to their nativ justic and magnanim, and we have conjur them by the ti of our common kindr to disavow these usurp, which would inevit interrupt our connect and correspond. thei too have been deaf to the voic of justic and of consanguin. we must, therefor, acquiesc in the necess, which denounc our separ, and hold them, as we hold the rest of mankind, enemi in war, in peac friend.
+
+we, therefor, the repres of the unit state of america, in gener congress, assembl, appeal to the suprem judg of the world for the rectitud of our intent, do, in the name, and by author of the good peopl of these coloni, solemnli publish and declar, that these unit coloni ar, and of right ought to be free and independ state, that thei ar absolv from all allegi to the british crown, and that all polit connect between them and the state of great britain, is and ought to be total dissolv; and that as free and independ state, thei have full power to levi war, conclud peac, contract allianc, establish commerc, and to do all other act and thing which independ state mai of right do. ? and for the support of thi declar, with a firm relianc on the protect of divin provid, we mutual pledg to each other our live, our fortun, and our sacr honor.
+
+Please choose which file you would like to work with:
+
+Enter 1 for Declaration of Independence
+Enter 2 for Alice in Wonderland
+Enter 3 to quit.
+
+1
+
+Please choose action you would like to take on the chosen file:
+
+Enter 1 to remove stop words
+Enter 2 to remove all non-alphabetical text
+Enter 3 to stem words into their root form
+Enter 4 to compute the frequency of each word
+Enter 5 to display the 20 most commonly appearing terms in decending order
+Enter 6 to quit.
+
+4
+
+
+You chose to compute the frequency of each word:
+
+
+inhabitants : 2
+been : 4
+hands : 1
+bring : 1
+mutually : 1
+without : 3
+rectitude : 1
+guards : 1
+these : 13
+fit : 1
+suffer : 1
+would : 2
+warfare : 1
+whatsoever : 1
+insurrections : 1
+thus : 1
+pass : 3
+excited : 1
+unalienable : 1
+an : 5
+whose : 2
+former : 1
+population : 1
+extend : 1
+as : 4
+submitted : 1
+at : 4
+transient : 1
+peace : 3
+institute : 1
+prudence : 1
+executioners : 1
+object : 2
+humble : 1
+be : 9
+prove : 1
+independent : 4
+bodies : 2
+deaf : 1
+abuses : 1
+example : 1
+same : 2
+systems : 1
+by : 13
+civil : 1
+relinquish : 1
+after : 1
+scarcely : 1
+a : 16
+absolved : 1
+right : 7
+constrained : 1
+the : 76
+destroyed : 1
+invasion : 1
+stage : 1
+throw : 1
+plundered : 1
+combined : 1
+under : 1
+returned : 1
+unfit : 1
+god : 1
+citizens : 1
+impel : 1
+do : 3
+good : 2
+hold : 3
+act : 1
+evils : 1
+obstructing : 1
+boundaries : 1
+others : 3
+train : 1
+which : 10
+savages : 1
+its : 3
+intentions : 1
+consent : 3
+respect : 1
+neglected : 1
+immediate : 1
+consanguinity : 1
+authority : 1
+parts : 1
+therefore : 2
+perfidy : 1
+necessity : 2
+legislature : 2
+united : 2
+importance : 1
+for : 29
+instrument : 1
+representation : 1
+states : 7
+prevent : 1
+salaries : 1
+happiness : 2
+candid : 1
+offences : 1
+evinces : 1
+exposed : 1
+human : 1
+just : 1
+incapable : 1
+prince : 1
+over : 2
+sole : 1
+depriving : 1
+governors : 1
+jury : 1
+endeavoured : 2
+mercenaries : 1
+tyrant : 1
+kept : 1
+with : 9
+form : 2
+publish : 1
+pledge : 1
+he : 19
+appealing : 1
+taking : 1
+fortunes : 1
+shewn : 1
+wanting : 1
+called : 1
+foreigners : 1
+armies : 2
+congress : 1
+therein : 1
+divine : 1
+legislative : 2
+america : 1
+sexes : 1
+tried : 1
+brethren : 2
+paralleled : 1
+judge : 1
+hath : 1
+burnt : 1
+crown : 1
+reduce : 1
+protecting : 1
+likely : 1
+large : 4
+in : 19
+altering : 1
+unwarrantable : 1
+made : 1
+distant : 1
+is : 10
+allegiance : 1
+it : 6
+suspended : 2
+petitions : 1
+erected : 1
+system : 1
+warned : 1
+fatiguing : 1
+whereby : 1
+become : 1
+legislatures : 2
+other : 3
+britain : 2
+works : 1
+against : 2
+pursuit : 1
+protection : 2
+solemnly : 1
+bands : 1
+settlement : 1
+government : 6
+world : 3
+encourage : 1
+ravaged : 1
+known : 1
+legislate : 1
+native : 1
+too : 1
+rights : 3
+charters : 1
+dissolve : 1
+have : 11
+together : 1
+sacred : 1
+accordingly : 1
+creator : 1
+may : 2
+within : 1
+desolation : 1
+off : 2
+murders : 1
+places : 1
+punishment : 1
+reminded : 1
+deriving : 1
+future : 1
+undistinguished : 1
+constrains : 1
+powers : 5
+subject : 1
+honor : 1
+political : 2
+british : 2
+while : 1
+trial : 2
+that : 13
+amongst : 1
+high : 1
+than : 1
+usurpations : 3
+colonies : 4
+representative : 1
+alter : 2
+all : 10
+dissolutions : 1
+frontiers : 1
+new : 4
+circumstances : 2
+already : 1
+introducing : 1
+shall : 1
+establishment : 1
+affected : 1
+friends : 2
+establish : 1
+becomes : 2
+principles : 1
+mock : 1
+arms : 1
+present : 1
+constitution : 1
+cause : 1
+decent : 1
+levy : 1
+inestimable : 1
+head : 1
+times : 1
+ties : 1
+and : 56
+of : 76
+men : 2
+design : 1
+hither : 2
+petitioned : 1
+define : 1
+dictate : 1
+kindred : 1
+alliances : 1
+render : 2
+on : 8
+imposing : 1
+or : 2
+nature : 1
+pretended : 2
+any : 2
+disavow : 1
+convulsions : 1
+earth : 1
+lands : 1
+evident : 1
+accommodation : 1
+opinions : 1
+forms : 2
+barbarous : 1
+refusing : 2
+wholesome : 1
+nation : 1
+establishing : 2
+commit : 1
+acts : 2
+firm : 1
+character : 1
+province : 1
+liberty : 1
+inevitably : 1
+english : 1
+let : 1
+sufferance : 1
+state : 2
+injury : 1
+dissolved : 2
+events : 1
+they : 7
+mankind : 3
+them : 15
+sufferable : 1
+remaining : 1
+benefit : 1
+each : 1
+seas : 3
+acquiesce : 1
+tyrants : 1
+must : 1
+obtained : 1
+conditions : 2
+invested : 1
+transporting : 2
+another : 1
+jurisdiction : 2
+manly : 1
+harass : 1
+giving : 1
+facts : 1
+long : 3
+seem : 1
+entitle : 1
+into : 2
+are : 9
+unless : 2
+taken : 1
+captive : 1
+so : 2
+free : 4
+destruction : 1
+legislation : 1
+ought : 2
+cruelty : 1
+necessary : 2
+laying : 1
+refused : 3
+correspondence : 1
+one : 1
+forbidden : 1
+enemies : 1
+many : 1
+people : 10
+declaration : 1
+connected : 1
+such : 6
+standing : 1
+absolute : 3
+armed : 1
+oppressions : 1
+to : 65
+representatives : 1
+operation : 1
+but : 1
+country : 1
+till : 1
+separate : 1
+declare : 2
+attend : 1
+administration : 1
+offices : 2
+ruler : 1
+secure : 1
+repeated : 3
+conjured : 1
+domestic : 1
+abdicated : 1
+whenever : 1
+separation : 2
+houses : 1
+things : 1
+military : 1
+has : 20
+unusual : 1
+abolishing : 3
+those : 1
+us : 11
+formidable : 1
+this : 3
+uncomfortable : 1
+elected : 1
+enlarging : 1
+once : 1
+towns : 1
+name : 1
+assume : 1
+support : 1
+compleat : 1
+changed : 1
+full : 1
+away : 1
+records : 1
+abolish : 1
+rule : 2
+commerce : 1
+we : 11
+life : 1
+nor : 1
+fundamentally : 1
+not : 1
+common : 1
+declaring : 2
+ends : 1
+themselves : 3
+now : 1
+disposed : 1
+assent : 4
+assembled : 1
+every : 2
+opposing : 1
+cases : 2
+answered : 1
+substance : 1
+attentions : 1
+war : 3
+indeed : 1
+equal : 2
+superior : 1
+duty : 1
+time : 5
+dangers : 1
+swarms : 1
+truths : 1
+annihilation : 1
+taxes : 1
+governments : 3
+when : 3
+troops : 1
+beyond : 1
+measures : 1
+terms : 1
+safety : 1
+payment : 1
+connection : 1
+dependent : 1
+between : 1
+attempts : 1
+laws : 9
+having : 1
+lives : 2
+emigration : 1
+contract : 1
+instituted : 1
+conclude : 1
+supreme : 1
+invasions : 1
+merciless : 1
+provide : 1
+light : 1
+providence : 1
+among : 5
+valuable : 1
+requires : 1
+neighbouring : 1
+civilized : 1
+direct : 1
+districts : 1
+magnanimity : 1
+exercise : 1
+foundation : 1
+our : 26
+out : 2
+foreign : 2
+pressing : 1
+fall : 1
+causes : 2
+unacknowledged : 1
+course : 1
+eat : 1
+power : 3
+established : 1
+reliance : 1
+multitude : 1
+more : 1
+great : 2
+destructive : 1
+redress : 1
+firmness : 1
+fellow : 1
+cutting : 1
+self : 1
+ages : 2
+organizing : 1
+certain : 1
+waging : 1
+indian : 1
+governed : 1
+voice : 1
+pursuing : 1
+tyranny : 2
+injuries : 1
+own : 1
+begun : 1
+appealed : 1
+experience : 1
+utterly : 1
+his : 9
+should : 4
+only : 2
+interrupt : 1
+justice : 3
+from : 6
+suspending : 1
+bear : 1
+totally : 2
+accustomed : 1
+tenure : 1
+connections : 1
+officers : 1
+raising : 1
+marked : 1
+natures : 1
+repeatedly : 1
+appropriations : 1
+coasts : 1
+king : 1
+created : 1
+history : 2
+obstructed : 1
+sent : 1
+most : 5
+effect : 1
+judges : 1
+unworthy : 1
+invariably : 1
+here : 2
+death : 1
+purpose : 2
+their : 20
+judiciary : 1
+despotism : 1
+general : 1
+security : 1
+alone : 1
+public : 2
+patient : 1
+station : 1
+naturalization : 1
+depository : 1
+denounces : 1
+endowed : 1
+rest : 1
+amount : 1
+will : 2
+arbitrary : 1
+trade : 1
+migrations : 1
+compliance : 1
+mean : 1
+quartering : 1
+
+Please choose which file you would like to work with:
+
+Enter 1 for Declaration of Independence
+Enter 2 for Alice in Wonderland
+Enter 3 to quit.
+
+2
+
+Please choose action you would like to take on the chosen file:
+
+Enter 1 to remove stop words
+Enter 2 to remove all non-alphabetical text
+Enter 3 to stem words into their root form
+Enter 4 to compute the frequency of each word
+Enter 5 to display the 20 most commonly appearing terms in decending order
+Enter 6 to quit.
+
+5
+
+
+You chose to display the 20 most commonly appearing terms in decending order:
+
+
+said : 462
+alice : 386
+little : 128
+one : 103
+know : 88
+like : 85
+went : 83
+thought : 74
+time : 71
+queen : 68
+see : 67
+well : 63
+king : 61
+now : 60
+began : 58
+turtle : 57
+mock : 56
+way : 56
+quite : 55
+hatter : 55
+
+Please choose which file you would like to work with:
+
+Enter 1 for Declaration of Independence
+Enter 2 for Alice in Wonderland
+Enter 3 to quit.
+
+3
+Exiting...
