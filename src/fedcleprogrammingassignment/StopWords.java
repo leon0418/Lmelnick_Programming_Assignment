@@ -17,7 +17,7 @@ public class StopWords {
 
         wordsFromTextList.removeAll(stopWords);
         if (display == true) {
-            System.out.println("\n\n\nText after Removal of stop words:\n\n" + wordsFromTextList.toString().replace(",", ""));
+            System.out.println(wordsFromTextList.toString().replace(",", ""));
         }
 
         return wordsFromTextList.toString().replace(",", "");
