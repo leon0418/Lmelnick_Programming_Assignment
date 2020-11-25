@@ -1,14 +1,15 @@
 How to run the program:
 Note: Requires Java 12 or higher on any computer you want to run the jar on
 
-Method 1: I have provided a link to my Google drive copy of the jar file to run this program in the email I sent that has the link to this Github repository. You can run it by 
-opening a command prompt and navigating to the location that you downloaded it. Enter: java -jar "FedCleProgrammingAssignment.jar"  
+Method 1: In the email I sent that has the link to this Github repository, I have provided a link to my Google drive copy of the jar file to run this program. You can run
+it this way by opening a command prompt and navigating to the location that you downloaded it. Enter: java -jar "FedCleProgrammingAssignment.jar"  
 
 Method 2: If you would like to instead build the jar from the code on the repo, please follow these steps.
 
   1. Download ANT 1.10 or higher from Apache here https://ant.apache.org/bindownload.cgi
-  2. Install ANT using instructions on their website here https://ant.apache.org/manual/index.html
-  3. Download the project from GitHub
+  2. Install ANT using instructions on their website here https://ant.apache.org/manual/index.html. This is not too involved, just setting environment variables. Here is
+     a really easy to follow guide: https://mkyong.com/ant/how-to-install-apache-ant-on-windows/
+  3. Download this project from GitHub
   3. Open CMD and navigate to the project root
   4. Enter: ant
   5. Should build the project and create the dist directory where the jar gets built
